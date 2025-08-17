@@ -11,7 +11,6 @@ ClockWise Mobile is a **student-focused time management mobile app** designed to
 - **Single-block Event Display**: Events spanning multiple hours are displayed as a single continuous block.  
 - **Study Timer**: Track and manage study sessions on the go.  
 - **Recording Uploads**: Upload and access class or personal recordings.  
-- **Monthly Holiday List**: View upcoming holidays for planning.  
 - **Secure Login**: User authentication for a personalized experience.
 
 ---
