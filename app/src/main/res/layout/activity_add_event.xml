@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/calendar_bg"
+    android:theme="@style/Theme.Project"
+    tools:context=".AddEvent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/frame_layout_border">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/schedule_now"
+                android:textColor="@color/white"
+                android:textSize="30sp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/event_name"
+                android:layout_marginTop="15dp"
+                app:boxBackgroundColor="@android:color/transparent"
+                app:boxStrokeColor="@color/text_input_box_stroke"
+                android:textColorHint="@color/white"
+                app:hintTextColor="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/event_name_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textCursorDrawable="@null"
+                    android:textColorHint="@color/white"
+                    android:inputType="text"
+                    android:textSize="20sp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/event_description"
+                android:layout_marginTop="15dp"
+                app:boxBackgroundColor="@android:color/transparent"
+                app:boxStrokeColor="@color/text_input_box_stroke"
+                android:textColorHint="@color/white"
+                app:hintTextColor="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/event_description_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:inputType="text"
+                    android:textSize="20sp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Date Picker Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/date_of_event"
+                android:layout_marginTop="15dp"
+                app:boxBackgroundColor="@android:color/transparent"
+                app:boxStrokeColor="@color/text_input_box_stroke"
+                android:textColorHint="@color/white"
+                app:hintTextColor="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/event_date_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="20sp"
+                    android:clickable="true"
+                    android:focusable="false" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Start Time Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/start_time"
+                android:layout_marginTop="15dp"
+                app:boxBackgroundColor="@android:color/transparent"
+                app:boxStrokeColor="@color/text_input_box_stroke"
+                android:textColorHint="@color/white"
+                app:hintTextColor="@color/white">
+
+                <EditText
+                    android:id="@+id/start_time_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="20sp"
+                    android:clickable="true"
+                    android:focusable="false" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Finish Time Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/finish_time"
+                android:layout_marginTop="15dp"
+                app:boxBackgroundColor="@android:color/transparent"
+                app:boxStrokeColor="@color/text_input_box_stroke"
+                android:textColorHint="@color/white"
+                app:hintTextColor="@color/white">
+
+                <EditText
+                    android:id="@+id/finish_time_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="20sp"
+                    android:clickable="true"
+                    android:focusable="false"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <FrameLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <Button
+                    android:id="@+id/add_event_button_id"
+                    android:text="@string/submit"
+                    android:onClick="submitEventButtonHandler"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:textSize="20sp"/>
+            </FrameLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

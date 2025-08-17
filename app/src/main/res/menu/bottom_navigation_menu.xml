@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottom_home"
+        android:title="@string/home"
+        android:icon="@drawable/home"
+        />
+    <item
+        android:id="@+id/bottom_Calender"
+        android:title="@string/calender"
+        android:icon="@drawable/calendar"
+        />
+    <item
+        android:title=""
+        android:enabled="true"
+        />
+    <item
+        android:id="@+id/bottom_Recordings"
+        android:title="@string/recordings"
+        android:icon="@drawable/recording"
+        />
+    <item
+        android:id="@+id/bottom_study"
+        android:title="@string/start_studying"
+        android:icon="@drawable/studying"
+        />
+
+</menu>

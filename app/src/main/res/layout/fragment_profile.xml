@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:gravity="center"
+    tools:context=".drawer.ProfileFragment">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="-350dp"
+        android:layout_height="420dp"
+        android:layout_gravity="top"
+        android:background="@drawable/rounded_header" />
+
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:layout_marginTop="-90dp"
+        android:elevation="50dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/profile_circle" />
+    <ImageButton
+        android:id="@+id/cameraAccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_camera"
+        android:elevation="50dp"
+        android:layout_marginTop="-60dp"
+        android:background="@color/light_blue"
+        android:layout_marginRight="-55dp" />
+
+    <TextView
+        android:id="@+id/userFullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="Joanne Slaton"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <!-- Change Password Section -->
+    <TextView
+        android:id="@+id/userEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:text="joanne@example.com"
+        android:textColor="@color/dark_gray"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:elevation="5dp"
+        android:padding="10dp"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:id="@+id/changePasswordSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_card"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_secure"
+                android:layout_alignParentStart="false"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:gravity="center"
+                android:text="Change Password"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/passwordForm"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/form_background"
+            android:elevation="20dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:padding="16dp">
+
+
+            <EditText
+                android:id="@+id/oldPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/form_background"
+                android:textColor="@color/black"
+                android:hint="Current Password"
+                android:inputType="textPassword"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/newPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/black"
+                android:background="@drawable/form_background"
+                android:hint="New Password"
+                android:inputType="textPassword"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/confirmNewPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/black"
+                android:background="@drawable/form_background"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:padding="10dp" />
+
+
+            <TextView
+                android:id="@+id/btnSavePassword"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/light_blue"
+                android:background="@drawable/rounded_card"
+                android:layout_gravity="center"
+                android:text="Save Password"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

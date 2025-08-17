@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/calendar_bg"
+    android:paddingVertical="45dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".calendar.CalendarFragment">
+
+    <TextView
+        android:id="@+id/reminder_calendar_id"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reminder_calendar"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginVertical="20dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="20dp">
+
+
+        <NumberPicker
+            android:id="@+id/month_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp" />
+
+        <NumberPicker
+            android:id="@+id/year_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/calendar_rv"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="33dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

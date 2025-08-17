@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_corner_record"
+    android:padding="10dp"
+    android:layout_margin="6dp"
+    android:elevation="4dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:gravity="start"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="start">
+
+            <TextView
+                android:id="@+id/recordingName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recording Name"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_current_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textSize="12sp"
+                    android:layout_marginEnd="6dp"
+                    android:textColor="@color/black"/>
+
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:tickMark="@color/light_blue"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tv_total_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textSize="12sp"
+                    android:layout_marginStart="6dp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Delete Button -->
+        <ImageButton
+            android:id="@+id/btn_delete"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="15dp"
+            android:contentDescription="Delete Recording"
+            android:src="@android:drawable/ic_menu_delete"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="@color/red"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:padding="4dp"
+        android:background="@color/light_blue"
+        >
+
+        <ImageButton
+            android:id="@+id/btn_rewind"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@android:drawable/ic_media_rew"
+            android:background="@null"
+            android:contentDescription="Rewind"/>
+
+        <ImageButton
+            android:id="@+id/btn_play_pause"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@android:drawable/ic_media_play"
+            android:background="@null"
+            android:contentDescription="Play/Pause"/>
+
+        <ImageButton
+            android:id="@+id/btn_forward"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@android:drawable/ic_media_ff"
+            android:background="@null"
+            android:contentDescription="Forward"/>
+    </LinearLayout>
+
+</LinearLayout>

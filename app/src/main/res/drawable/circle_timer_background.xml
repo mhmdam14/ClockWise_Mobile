@@ -1,0 +1,18 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Gradient background -->
+    <gradient
+        android:angle="45" /> <!-- Adjust the angle for gradient direction -->
+
+    <!-- Border of the circle -->
+    <stroke
+        android:width="6dp"
+        android:color="@color/white" />
+
+    <!-- Circular shape -->
+    <corners android:radius="150dp" />
+
+    <!-- Size of the circle -->
+    <size
+        android:width="300dp"
+        android:height="300dp" />
+</shape>
